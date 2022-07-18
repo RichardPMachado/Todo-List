@@ -1,6 +1,7 @@
 const btnCriaTarefa = document.getElementById('criar-tarefa');
 const inputTarefa = document.getElementById('texto-tarefa');
 const listaOl = document.querySelector('#lista-tarefas');
+const btnApagar = document.querySelector('#apaga-tudo');
 
 // ============================== Requisito 5 Criar Tarefas ==============================
 
@@ -35,3 +36,14 @@ function tarefaCompleta(event) {
 }
 
 listaOl.addEventListener('dblclick', tarefaCompleta);
+
+// ============================== Requisito 10 Apagar Tudo ==============================
+
+function btnApagaTudo() {
+  const tarefasLi = document.querySelectorAll('#lista-tarefas li');
+  for (let index = 0; index < tarefasLi.length; index += 1) {
+    tarefasLi[index].remove();
+  }
+}
+
+btnApagar.addEventListener('click', btnApagaTudo);
