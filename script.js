@@ -2,7 +2,6 @@ const btnCriaTarefa = document.getElementById('criar-tarefa');
 const inputTarefa = document.getElementById('texto-tarefa');
 const listaOl = document.querySelector('#lista-tarefas');
 
-
 // ============================== Requisito 5 Criar Tarefas ==============================
 
 function criaTarefas() {
@@ -25,6 +24,14 @@ function addBackgroundColor(event) {
   event.target.classList.add('gray');
   listaOl.classList.remove('gray');
 }
+
 listaOl.addEventListener('click', addBackgroundColor);
 
-// ============================== Requisito 10 Apagar Tarefas ==============================
+// ============================== Requisito 09 DBClick Completed ==============================
+
+function tarefaCompleta(event) {
+  // event.target.classList.remove('gray');
+  event.target.classList.toggle('completed');
+}
+
+listaOl.addEventListener('dblclick', tarefaCompleta);
