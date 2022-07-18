@@ -1,4 +1,3 @@
-
 // const pegarbutton = document.getElementById('criar-tarefa');
 // const pegarinput = document.getElementById('texto-tarefa');
 // const pegarlista = document.getElementById('lista-tarefas');
@@ -24,55 +23,55 @@
 //   pegarlista.appendChild(novoItem);
 //   pegarinput.value = '';
 // }
-// pegarbutton.addEventListener('click', criarTarefa);
+// // pegarbutton.addEventListener('click', criarTarefa);
 
-const criar = document.querySelector('#criar-tarefa');
-const inputTarefa = document.querySelector('#texto-tarefa');
-const olPai = document.querySelector('#lista-tarefas');
-const btnApagar = document.querySelector('#apaga-tudo');
-const olFilhos = document.querySelectorAll('#lista-tarefas li');
+// const criar = document.querySelector('#criar-tarefa');
+// const inputTarefa = document.querySelector('#texto-tarefa');
+// const olPai = document.querySelector('#lista-tarefas');
+// const btnApagar = document.querySelector('#apaga-tudo');
+// const olFilhos = document.querySelectorAll('#lista-tarefas li');
 
-// ===============================  Adicionar Tarefa  ==================================
+// // ===============================  Adicionar Tarefa  ==================================
 
-function addCompromisso() {
-  const addTarefa = document.createElement('li');
-  addTarefa.innerText = inputTarefa.value;
-  addTarefa.className = 'grey';
-  olPai.appendChild(addTarefa);
-  inputTarefa.value = '';
-}
+// function addCompromisso() {
+//   const addTarefa = document.createElement('li');
+//   addTarefa.innerText = inputTarefa.value;
+//   addTarefa.className = 'grey';
+//   olPai.appendChild(addTarefa);
+//   inputTarefa.value = '';
+// }
 
-criar.addEventListener('click', addCompromisso);
+// criar.addEventListener('click', addCompromisso);
 
-// ===============================  Adicionar Background Grey  ==================================
+// // ===============================  Adicionar Background Grey  ==================================
 
-function addBackgroundLi(event) {
-  const lis = document.querySelectorAll('.grey');
-  if (lis) {
-    lis.classList.remove('grey');
-  }
-  event.target.classList.add('grey');
-}
-olFilhos.addEventListener('click', addBackgroundLi);
-//   const lis = document.querySelectorAll('.tarefas');
-//   for (let index = 0; index < lis.length; index += 1) {
-//     lis[index].className = 'tarefas';
+// function addBackgroundLi(event) {
+//   const lis = document.querySelectorAll('.grey');
+//   if (lis) {
+//     lis.classList.remove('grey');
 //   }
 //   event.target.classList.add('grey');
 // }
+// olFilhos.addEventListener('click', addBackgroundLi);
+// //   const lis = document.querySelectorAll('.tarefas');
+// //   for (let index = 0; index < lis.length; index += 1) {
+// //     lis[index].className = 'tarefas';
+// //   }
+// //   event.target.classList.add('grey');
+// // }
 
-// for (let index = 0; index < olFilhos.length; index += 1) {
-//   olFilhos[index].addEventListener('click', addBackgroundLi);
+// // for (let index = 0; index < olFilhos.length; index += 1) {
+// //   olFilhos[index].addEventListener('click', addBackgroundLi);
+// // }
+
+// // ===============================  Botão Apagar  ==================================
+
+// function removeTodos() {
+//   const tarefasLi = document.querySelectorAll('#lista-tarefas li');
+
+//   for (let index = 0; index < tarefasLi.length; index += 1) {
+//     tarefasLi[index].remove();
+//   }
 // }
 
-// ===============================  Botão Apagar  ==================================
-
-function removeTodos() {
-  const tarefasLi = document.querySelectorAll('#lista-tarefas li');
-
-  for (let index = 0; index < tarefasLi.length; index += 1) {
-    tarefasLi[index].remove();
-  }
-}
-
-btnApagar.addEventListener('click', removeTodos);
+// btnApagar.addEventListener('click', removeTodos);
