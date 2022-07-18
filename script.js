@@ -2,7 +2,7 @@ const btnCriaTarefa = document.getElementById('criar-tarefa');
 const inputTarefa = document.getElementById('texto-tarefa');
 const listaOl = document.querySelector('#lista-tarefas');
 const btnApagar = document.querySelector('#apaga-tudo');
-
+const btnRemoverFinalizados = document.querySelector('#remover-finalizados');
 // ============================== Requisito 5 Criar Tarefas ==============================
 
 function criaTarefas() {
@@ -47,3 +47,16 @@ function btnApagaTudo() {
 }
 
 btnApagar.addEventListener('click', btnApagaTudo);
+
+// ============================== Requisito 11 Remover Finalizados ==============================
+
+function removerFinalizados() {
+  const tarefasLi = document.querySelectorAll('#lista-tarefas li');
+  for (let index = 0; index < tarefasLi.length; index += 1) {
+    if (tarefasLi[index].classList.contains('completed')) {
+      tarefasLi[index].remove();
+    }
+  }
+}
+
+btnRemoverFinalizados.addEventListener('click', removerFinalizados);
